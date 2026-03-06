@@ -32,3 +32,52 @@ document.getElementById("password-input").addEventListener("keydown", function (
     }
 });
 
+// ================================
+//       LOAD ALL ISSUES
+// ================================
+
+async function loadAllIssues() {
+    showSpinner();
+
+    const res = await fetch(`${API_URL}/issues`);
+    const data = await res.json();
+
+    // api theke issues array niye nibo
+    allIssues = data.data || data.issues || data;
+
+    hideSpinner();
+
+    // open/closed count update
+    updateStatusCount();
+
+    // show all issues by default
+    showIssues(allIssues);
+}
+
+
+// ================================
+//       SHOW ISSUES (RENDER)
+// ================================
+
+function showIssues(issues) {
+    const grid = document.getElementById("cards-grid");
+    const countText = document.getElementById("issues-count-text");
+
+    grid.innerHTML = "";
+    countText.textContent = `${issues.length} Issues`;
+
+    if (issues.length === 0) {
+        grid.innerHTML = `
+            <div class="col-span-4 text-center py-16 text-gray-400">
+                <p class="text-4xl mb-3">🔍</p>
+                <p class="text-base">No issues found</p>
+            </div>
+        `;
+        return;
+    }
+
+    issues.forEach(function (issue) {
+        const card = createCard(issue);
+        grid.appendChild(card);
+    });
+}
