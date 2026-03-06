@@ -77,7 +77,32 @@
         </div>
     </div>
 
+<!--          DASHBOARD              -->
+    <!-- =============================== -->
+    <div id="dashboard" class="min-h-screen bg-gray-100">
 
+        <!-- NAVBAR -->
+        <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
+
+                <!-- Left: Logo + Name -->
+                <div class="flex items-center gap-2">
+                    <img src="./assets/github-logo.png" alt="github logo" style="width:24px; height:24px;">
+                    <span class="font-bold text-gray-900 text-sm">GitHub Issues Tracker</span>
+                </div>
+
+                <!-- Right: Search + Button -->
+                <div class="flex items-center gap-2">
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden bg-gray-50">
+                        <span class="pl-3 text-gray-400 text-sm"><i class="fa fa-search"></i></span>
+                        <input id="search-input" type="text" placeholder="Search issues..."
+                            class="outline-none bg-transparent px-2 py-2 text-sm w-48">
+                    </div>
+                    <button class="btn btn-primary btn-sm">+ New Issue</button>
+                </div>
+
+            </div>
+        </nav>
 
 
 
