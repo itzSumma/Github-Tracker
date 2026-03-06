@@ -13,10 +13,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
                          <!-- Font-Awesome -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- Fav Icon -->
+<link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+<style>
+        * { font-family: "Inter", sans-serif; }
 
-
+        /* #dashboard { display: none; } */
+        </style>
 </head>
-<body>
-    
+<body class="bg-gray-100">
+<!--LOGIN PAGE -->
+    <div id="login-page" class="min-h-screen flex items-center justify-center">
+
+        <div class="bg-white rounded-xl shadow-xl p-10 w-full max-w-md border border-gray-200">
+
+            <!-- Logo + Title + Subtitle -->
+            <div class="flex flex-col items-center mb-5">
+                <img src="./assets/github-logo.png" alt="github logo" class="mb-3" style="width:56px; height:56px;">
+                <h1 class="text-2xl font-bold text-black mt-2">GitHub Issues Tracker</h1>
+                <p class="text-md text-gray-500 mt-1">Sign in to manage your issues</p>
+            </div>
+
+            <!-- Error message
+            <div id="login-error" class="hidden text-center rounded-lg mb-4 py-2 text-sm bg-red-50 border border-red-200 text-red-600">
+                Wrong username or password!
+            </div> -->
+
+            <!-- Username -->
+            <div class="mb-4">
+                <label class="block font-semibold text-black mb-1">Username</label>
+                <input id="username-input" type="text" placeholder="Enter Username"
+                    class="input input-bordered w-full text-sm">
+                <p class="text-sm mt-1 text-indigo-500">Default: admin</p>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-5">
+                <label class="block text-md font-semibold text-black mb-1">Password</label>
+                <input id="password-input" type="password" placeholder="Enter Password"
+                    class="input input-bordered w-full text-sm">
+                <p class="text-sm mt-1 text-indigo-500">Default: admin123</p>
+            </div>
+
+            <!-- Sign In button -->
+            <button onclick="handleLogin()" class="btn rounded-xl btn-primary w-full text-lg">
+                Sign In
+            </button>
+
+
+
+
+
+
 </body>
 </html>
