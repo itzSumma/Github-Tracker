@@ -67,7 +67,7 @@ const result = [1, 2, 3].map(n => n * 2);
 
 Example:
 
-```js
+```js 
 const even = [1, 2, 3, 4].filter(n => n % 2 === 0);
 ```
 
